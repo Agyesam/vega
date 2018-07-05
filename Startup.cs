@@ -21,7 +21,7 @@ namespace vega
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<VegaDbContext>(options =>
-            options.UseSqlServer("...."))
+            options.UseSqlServer(Configuration["ConnectionString:Default"]))
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the Angular files will be served from this directory

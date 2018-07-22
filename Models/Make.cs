@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace vega.Models {
    public class Make
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         [StringLength(255)]
